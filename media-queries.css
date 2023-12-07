@@ -2,25 +2,41 @@
 
 }
 body {
+
+}
+
+.page-wrapper {
     display: flex;
+    flex-direction: column;
+}
+.header-main {
+    display: flex;
+    flex-direction: row;
+}
+nav {
+    display: flex;
+    /*justify-content: flex-end;*/
     flex-wrap: wrap;
 }
-
-nav {
-    justify-content: flex-end;
-    background-color: red;
-}
-
 .nav-links {
     display: flex;
     justify-content: space-evenly;
+    width: 260px;
+    list-style: none;
 }
 h1 {
     flex-grow: 1;
-    justify-content: flex-start;
+    /*justify-content: flex-start;*/
 }
-@media screen and (min-width: 340px) {
+
+.alert-info.hidden-on-desktop {
+    display: none;
+}
+@media screen and (max-width: 600px) {
+    .nav-links {
+        flex-direction:column;
+    }
     .alert-info.hidden-on-desktop {
-        display: none;
+        display: block;
     }
 }
