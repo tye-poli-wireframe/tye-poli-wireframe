@@ -1,55 +1,88 @@
-body {
-    max-width: 900px;
-}
+                        /* Each CSS rule starts with a selector — or a list of selectors —
+                        in order to tell the browser which element or elements the rules should apply to.
+                        /*All the examples below are valid selectors or lists of selectors.*!
+                        https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured */
+
+/*-----------------------------------------++++++++++++++++++++++++++++++++++*-----------------------------------------/
+
+
+
+
+ */
+/* We are giving this selector rules that will make the entire page into the main flexbox container */
 .page-wrapper {
     display: flex;
-    flex-wrap: wrap;
-    max-width: 900px;
+    max-width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
     flex-direction: column;
-    align-content: center;
+    align-items: center;
 }
+
+/* Hiding the alert for Mobile View only */
+.alert-info.hidden-on-desktop {
+    display: none;
+}
+
+/* Now we are using this selector to make another flexbox
+for the div elements within the class name "header-main" */
 .header-main {
     display: flex;
     flex-direction: row;
     align-content: center;
     width: 100%;
 }
+
+/* We want to make this header element, since its the only one,
+ have most of the space it can take up in its ROW */
+h1 {
+    flex-grow: 1;
+    display:inline-flex;
+    justify-content: flex-start;
+}
+
 nav {
     display: flex;
+    justify-content: center;
  }
+
 .nav-links {
     display: flex;
-    flex-direction: row;
     align-items: center;
     margin: auto;
     list-style: none;
 }
+
 .nav-links a {
     padding-left: 1em;
 }
+
+.header-img {
+    /*margin: 15px;*/
+    /*max-width: 100%;*/
+    /*!*max-height: 100%;*!*/
+}
+
 .sections {
     display: flex;
     flex-direction: row;
     padding-bottom: 250px;
 }
-    .main {
+
+.main {
     padding-right: 1em;
 }
+
 .sub-section {
     padding-left: 0;
 }
 
-h1 {
-    flex-grow: 1;
-}
 footer {
     display: flex;
     flex-direction: column-reverse;
 }
 
-.alert-info.hidden-on-desktop {
-    display: none;
-}
+
 @media screen and (max-width: 339px) {
 
 .alert-info.hidden-on-desktop {
@@ -57,7 +90,6 @@ footer {
     border: 1px solid lightgrey;
     text-align: center;
     width: 100%;
-    /*margin: 1em;*/
     padding: 5px;
 
     >a {
@@ -67,24 +99,34 @@ footer {
 }
     .page-wrapper {
         flex-direction: column;
-        /*align-content: center;*/
     }
     .alert-info.hidden-on-desktop {
         display: block;
     }
     .header-main {
         flex-direction: column;
-        flex-wrap: nowrap;
+    }
+    h1 {
+        justify-content: center;
     }
     nav {
         flex-direction: column;
-
     }
     .nav-links {
+        display: flex;
         flex-direction: column;
+        padding: 0;
+        border: 1px solid;
+
+        >li {
+            background-color: lightgray;
+            text-align: center;
+            width: 100%;
+            align-content: space-between;
+
+        }
     }
     .sections {
         flex-direction: column;
     }
-
 }
