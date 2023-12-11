@@ -82,39 +82,83 @@ li {
 footer {
     display: flex;
     flex-direction: column-reverse;
+    align-items: center;
 }
 
+div {
+    display: flex;
+
+
+
+    .fa {
+        padding: 20px;
+        font-size: 30px;
+        width: 30px;
+        display: flex;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+        border-radius: 10%;
+    }
+
+    .fa:hover {
+        opacity: 0.7;
+    }
+
+    .fa-facebook {
+        background: #3B5998;
+        color: white;
+    }
+    .fa-instagram {
+        background: #125688;
+        color: white;
+    }
+    .fa-twitter {
+        background: #55ACEE;
+        color: white;
+    }
+    .fa-linkedin {
+        background: #007bb5;
+        color: white;
+    }
+}
 
 @media screen and (max-width: 339px) {
 
-.alert-info.hidden-on-desktop {
-    background-color: #cbffff;
-    border: 1px solid lightgrey;
-    text-align: center;
-    width: 100%;
-    padding: 5px;
+    .alert-info.hidden-on-desktop {
+        background-color: #cbffff;
+        border: 1px solid lightgrey;
+        text-align: center;
+        width: 100%;
+        padding: 5px;
 
-    >a {
-        text-decoration: none;
-        color: black;
+        > a {
+            text-decoration: none;
+            color: black;
+        }
     }
-}
+
     .page-wrapper {
         flex-direction: column;
     }
+
     .alert-info.hidden-on-desktop {
         display: block;
     }
+
     .header-main {
         flex-direction: column;
     }
+
     h1 {
         justify-content: center;
         display: inline-flex;
     }
+
     nav {
         flex-direction: column;
     }
+
     .nav-links {
         display: flex;
         flex-direction: column;
@@ -122,7 +166,7 @@ footer {
         justify-content: center;
         gap: 1rem;
 
-        >li {
+        > li {
             display: flex;
             flex-direction: column;
             background-color: lightgray;
@@ -132,11 +176,18 @@ footer {
             padding: .25rem;
         }
     }
+
     img {
         height: 224px;
         width: 260px;
     }
+
     .sections {
+        flex-direction: column;
+    }
+
+    div {
+        display: flex;
         flex-direction: column;
     }
 }
